@@ -22,7 +22,7 @@ from werkzeug.utils import secure_filename
 app = Flask(__name__)
 
 # Model saved with Keras model.save()
-MODEL_PATH =''
+MODEL_PATH ='model_50_eopchs_sgd_20190804.h5'
 
 # Load your trained model
 model = load_model(MODEL_PATH)
