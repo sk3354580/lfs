@@ -33,21 +33,16 @@ model = model_from_json(loaded_model_json)
 
 # Get weights into the model
 model.load_weights(MODEL_WEIGHTS)
-#print('Model loaded. Check http://127.0.0.1:5000/')
+print('Model loaded. Check http://127.0.0.1:5000/')
 
 
 # ::: MODEL FUNCTIONS :::
 def model_predict(img_path, model):
-	'''
-		Args:
-			-- img_path : an URL path where a given image is stored.
-			-- model : a given Keras CNN model.
-	'''
+	
 
 	IMG = image.load_img(img_path).convert('L')
 	print(type(IMG))
 
-	# Pre-processing the image
 	IMG_ = IMG.resize((257, 342))
 	print(type(IMG_))
 	IMG_ = np.asarray(IMG_)
