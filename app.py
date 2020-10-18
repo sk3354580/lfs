@@ -22,8 +22,8 @@ app = Flask(__name__)
 
 # ::: Prepare Keras Model :::
 # Model files
-MODEL_ARCHITECTURE = 'model/model_adam.json'
-MODEL_WEIGHTS = 'model/model_100_eopchs_adam_20190807.h5'
+MODEL_ARCHITECTURE = 'model_adam.json'
+MODEL_WEIGHTS = 'model_100_eopchs_adam_20190807.h5'
 
 # Load the model from external files
 json_file = open(MODEL_ARCHITECTURE)
@@ -33,7 +33,7 @@ model = model_from_json(loaded_model_json)
 
 # Get weights into the model
 model.load_weights(MODEL_WEIGHTS)
-print('Model loaded. Check http://127.0.0.1:5000/')
+#print('Model loaded. Check http://127.0.0.1:5000/')
 
 
 # ::: MODEL FUNCTIONS :::
